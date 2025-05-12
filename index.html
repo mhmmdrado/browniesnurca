@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>BrowniesNurca</title>
+</head>
+<body>
+
+  <nav class="navbar">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <div class="nav-content">
+      <div class="nav-left">
+        <a href="#beranda">Beranda</a>
+        <a href="#produk">Produk</a>
+        <a href="#keranjang">Keranjang</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div class="nav-right">
+        <span class="toko-nama">BrowniesNurca</span>
+      </div>
+    </div>
+  </nav>
+
+  <section id="beranda">
+    <div class="jumbotron">
+      <h2>Deskripsi Toko</h2>
+      <div class="deskripsi-grid">
+        <div>
+          <p><strong>Brownies Nurca</strong>adalah toko kue rumahan yang berfokus pada pembuatan brownies berkualitas tinggi dengan cita rasa autentik dan tekstur lembut. Kami menggunakan bahan-bahan pilihan seperti cokelat premium, mentega asli, dan tepung berkualitas.</p>
+        </div>
+        <div>
+          <p>Produk unggulan kami antara lain: Brownies Original, Brownies Banana Cheese, Brownies Green Tea, Brownies Tiramisu, Dan kami juga menyediakan varian mini dan brownies kering yang cocok untuk oleh-oleh atau camilan praktis.</p>
+        </div>
+        <div>
+          <p>Keunggulan kami meliputi penggunaan bahan alami tanpa pengawet, proses pembuatan higienis, serta kemasan menarik untuk berbagai kebutuhan seperti hampers, acara spesial, atau oleh-oleh khas Bandung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="produk">
+    <h2>Produk Kami</h2>
+    <div class="grid-produk">
+      <div class="produk" data-nama="Original Brownies" data-harga="50000" data-gambar="img/brownies original.webp">
+        <img src="img/brownies original.webp" alt="Original Brownies" width="150" height="150">
+        <h3>Original Brownies</h3>
+        <p>Rp50.000</p>
+        <button onclick="tambahKeKeranjang(this)"><i class="fas fa-shopping-cart"></i> Tambahkan ke Keranjang</button>
+      </div>
+      <div class="produk" data-nama="Brownies Kering" data-harga="80000" data-gambar="img/BrowniesKering2.webp">
+        <img src="img/BrowniesKering2.webp" alt="Brownies Kering" width="150" height="150">
+        <h3>Brownies Kering</h3>
+        <p>Rp80.000</p>
+        <button onclick="tambahKeKeranjang(this)"><i class="fas fa-shopping-cart"></i> Tambahkan ke Keranjang</button>
+      </div>
+      <div class="produk" data-nama="Brownies Tiramisu" data-harga="70000" data-gambar="img/Tiramisu1.png">
+        <img src="img/Tiramisu1.png" alt="Brownies Tiramisu" width="150" height="150">
+        <h3>Brownies Tiramisu</h3>
+        <p>Rp70.000</p>
+        <button onclick="tambahKeKeranjang(this)"><i class="fas fa-shopping-cart"></i> Tambahkan ke Keranjang</button>
+      </div>
+      <div class="produk" data-nama="Brownies Green Tea" data-harga="80000" data-gambar="img/Greentea1.webp">
+        <img src="img/Greentea1.webp" alt="Brownies Green Tea" width="150" height="150">
+        <h3>Brownies Green Tea</h3>
+        <p>Rp80.000</p>
+        <button onclick="tambahKeKeranjang(this)"><i class="fas fa-shopping-cart"></i> Tambahkan ke Keranjang</button>
+      </div>
+      <div class="produk" data-nama="Brownies Banana Cheese" data-harga="90000" data-gambar="img/BananaCheese1.webp">
+        <img src="img/BananaCheese1.webp" alt="Brownies Banana Cheese" width="150" height="150">
+        <h3>Brownies Banana Cheese</h3>
+        <p>Rp90.000</p>
+        <button onclick="tambahKeKeranjang(this)"><i class="fas fa-shopping-cart"></i> Tambahkan ke Keranjang</button>
+      </div>
+      <div class="produk" data-nama="Brownies Cheese Cream" data-harga="100000" data-gambar="img/CheeseCream1.webp">
+        <img src="img/CheeseCream1.webp" alt="Brownies Cheese Cream" width="150" height="150">
+        <h3>Brownies Cheese Cream</h3>
+        <p>Rp100.000</p>
+        <button onclick="tambahKeKeranjang(this)"><i class="fas fa-shopping-cart"></i> Tambahkan ke Keranjang</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="keranjang">
+  <h2><i class="fas fa-shopping-cart" id="icon-keranjang"></i> Keranjang</h2>
+    <p>Produk di keranjang:</p>
+    <div class="grid-produk" id="isi-keranjang"></div>
+    <p id="total"><strong>Total: Rp0</strong></p>
+    <button style="margin-top: 20px;">Bayar Sekarang</button>
+  </section>
+
+  <section id="kontak">
+    <h2>Kontak Kami</h2>
+    <form action="#" method="post">
+      <input type="text" name="nama" required placeholder="Nama Anda">
+      <input type="email" name="email" required placeholder="Email Anda">
+      <textarea name="pesan" rows="5" required placeholder="Tulis pesan Anda..."></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BrowniesNurca. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const isiKeranjang = document.getElementById("isi-keranjang");
+    const totalElement = document.getElementById("total");
+    let total = 0;
+
+    function tambahKeKeranjang(button) {
+      const produk = button.parentElement;
+      const nama = produk.getAttribute("data-nama");
+      const harga = parseInt(produk.getAttribute("data-harga"));
+      const gambar = produk.getAttribute("data-gambar");
+
+      const item = document.createElement("div");
+      item.classList.add("produk", "fade-in");
+      item.innerHTML = `
+        <img src="${gambar}" alt="${nama}" width="150" height="150">
+        <h3>${nama}</h3>
+        <p>Rp${harga.toLocaleString("id-ID")}</p>
+      `;
+      isiKeranjang.appendChild(item);
+
+      total += harga;
+      totalElement.innerHTML = `<strong>Total: Rp${total.toLocaleString("id-ID")}</strong>`;
+
+       totalElement.classList.add("total-bounce");
+  setTimeout(() => {
+    totalElement.classList.remove("total-bounce");
+  }, 300);
+
+  const iconKeranjang = document.getElementById("icon-keranjang");
+iconKeranjang.classList.add("shake");
+setTimeout(() => {
+  iconKeranjang.classList.remove("shake");
+}, 400);
+
+    }
+  </script>
+
+</body>
+</html>
